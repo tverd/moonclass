@@ -30,9 +30,11 @@ Create a class Foo in foo.lua:
 ```Lua
 local class = require 'moonclass'
 
-Foo = class 'Foo'
+local Foo = class 'Foo'
 function Foo:new()
 end
+
+return Foo
 ```
 
 Import class Foo to bar.moon:
