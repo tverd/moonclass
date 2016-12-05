@@ -1,5 +1,5 @@
 # Moonclass
-Moon class implementation for Lua
+MoonScript class implementation for Lua
 
 ### How to use
 Create a class Foo in foo.moon:
