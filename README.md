@@ -17,7 +17,7 @@ Import class Foo to bar.lua:
 local class = require 'moonclass'
 local Foo = require 'foo'
 
-Bar = class('Bar', Foo)
+local Bar = class('Bar', Foo)
 function Bar:new()
     Foo.new(self)
 end
