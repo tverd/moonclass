@@ -1,2 +1,3 @@
-# moonsclass
-Moon class implementation for LUA
+# moonclass
+Moon class implementation for Lua
+
