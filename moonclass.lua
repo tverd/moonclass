@@ -14,6 +14,7 @@ createClass = function(name, parent)
   class_t.__base = base_t
   base_t.__index = base_t
   if parent then
+    class_t.__init = parent.__init
     parent.__base.new = parent.__init
     if parent.__inherited then
       parent:__inherited(class_t)

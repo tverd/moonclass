@@ -1,5 +1,5 @@
 --
---    Copyright (c) 2013-2016 Mikhail Yakushev
+--    Copyright (c) 2013-2017 Mikhail Yakushev
 
 --    Permission is hereby granted, free of charge, to any person
 --    obtaining a copy of this software and associated documentation
@@ -36,6 +36,7 @@ createClass = ( name, parent ) ->
     base_t.__index = base_t
 
     if parent
+        class_t.__init = parent.__init
         parent.__base.new = parent.__init
 
         if parent.__inherited
@@ -47,7 +48,7 @@ createClass = ( name, parent ) ->
     setmetatable class_t,
         __index: ( _, key ) ->
             val = rawget base_t, key
-            if val == nil and parent 
+            if val == nil and parent
                 parent[key]
             else
                 val
